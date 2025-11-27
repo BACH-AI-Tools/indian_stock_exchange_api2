@@ -30,7 +30,7 @@ Visit **[EMCP Platform](https://sit-emcp.kaleido.guru)** now to start your MCP j
 
 ## Introduction
 
-This is an automatically generated MCP server using [FastMCP](https://fastmcp.wiki) for accessing the Indian Stock Exchange Api2 API.
+This is an MCP server for accessing the Indian Stock Exchange Api2 API.
 
 - **PyPI Package**: `bach-indian_stock_exchange_api2`
 - **Version**: 1.0.0
@@ -108,8 +108,8 @@ export API_KEY="your_api_key_here"
 {
   "mcpServers": {
     "indian_stock_exchange_api2": {
-      "command": "python",
-      "args": ["E:\path\to\indian_stock_exchange_api2\server.py"],
+      "command": "uvx",
+      "args": ["--from", "bach-indian_stock_exchange_api2", "bach_indian_stock_exchange_api2"],
       "env": {
         "API_KEY": "your_api_key_here"
       }

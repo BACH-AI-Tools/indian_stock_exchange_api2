@@ -1,0 +1,490 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Indian Stock Exchange Api2",
+    "version": "1.0.0",
+    "description": "RapidAPI: linuz/indian-stock-exchange-api2"
+  },
+  "servers": [
+    {
+      "url": "https://indian-stock-exchange-api2.p.rapidapi.com"
+    }
+  ],
+  "paths": {
+    "/corporate_actions": {
+      "get": {
+        "summary": "Corporate Actions",
+        "description": "Get Corporate Actions Data",
+        "operationId": "corporate_actions",
+        "parameters": [
+          {
+            "name": "stock_name",
+            "in": "query",
+            "required": true,
+            "description": "Example value: infosys",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/historical_data": {
+      "get": {
+        "summary": "Historical Data",
+        "description": "- **Endpoint**: `/historical_data` - **Method**: `GET` - **Query Parameters**:     - `stock_name` (required): string     - `period` (optional): string, default is \\",
+        "operationId": "historical_data",
+        "parameters": [
+          {
+            "name": "stock_name",
+            "in": "query",
+            "required": true,
+            "description": "Example value: tcs",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "period",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mutual_fund_search": {
+      "get": {
+        "summary": "Mutual Fund Search",
+        "description": "### Mutual Fund Search  **Endpoint**: `GET /mutual_fund_search`  **Description**: This endpoint allows you to search for mutual funds.  **Parameters**: - `query` (string, required): The search term to query the mutual funds.  **Response**: ```json [   {     \\",
+        "operationId": "mutual_fund_search",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: nippon",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ipo": {
+      "get": {
+        "summary": "IPO",
+        "description": "Get latest upcoming, listed, active, closed IPO data.",
+        "operationId": "ipo",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/NSE_most_active": {
+      "get": {
+        "summary": "NSE Most Active",
+        "description": "### NSE Most Active  **Endpoint:** `/NSE_most_active`   **Method:** GET    **Description:**   Get the latest most active stocks in the National Stock Exchange (NSE) based on trading volume.  **Example Request:** ```http GET /NSE_most_active ```  **Example Response:** ```json [     {         \\",
+        "operationId": "nse_most_active",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/stock_forecasts": {
+      "get": {
+        "summary": "Stock Forecasts",
+        "description": "$237",
+        "operationId": "stock_forecasts",
+        "parameters": [
+          {
+            "name": "stock_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: TCS",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "measure_code",
+            "in": "query",
+            "required": true,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "period_type",
+            "in": "query",
+            "required": true,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "data_type",
+            "in": "query",
+            "required": true,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "age",
+            "in": "query",
+            "required": true,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/historical_stats": {
+      "get": {
+        "summary": "Historical Stats",
+        "description": "- **Endpoint**: `/historical_stats` - **Method**: `GET` - **Query Parameters**:     - `stock_name` (required): string     - `stats` (required): string - **Description**: Retrieve historical statistics for a specific stock. - **Example Request**:     ```http     GET /historical_stats?stock_name=TATAMOTORS\\u0026stats=quarter_results     ```",
+        "operationId": "historical_stats",
+        "parameters": [
+          {
+            "name": "stock_name",
+            "in": "query",
+            "required": true,
+            "description": "Example value: TCS",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "stats",
+            "in": "query",
+            "required": false,
+            "description": "Example value: ",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fetch_52_week_high_low_data": {
+      "get": {
+        "summary": "Fetch 52 Week High Low Data",
+        "description": "$238",
+        "operationId": "fetch_52_week_high_low_data",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mutual_funds": {
+      "get": {
+        "summary": "Mutual Funds",
+        "description": "### Mutual Funds  **Endpoint:** `/mutual_funds`   **Method:** GET    **Description:**   Retrieve the latest data for mutual funds, including net asset value (NAV), returns, and other details.  **Example Request:** ```http GET /mutual_funds ```  **Example Response:** ```json {     \\",
+        "operationId": "mutual_funds",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/BSE_most_active": {
+      "get": {
+        "summary": "BSE Most Active",
+        "description": "### BSE Most Active  **Endpoint:** `/BSE_most_active`   **Method:** GET    **Description:**   Get the latest most active stocks in the Bombay Stock Exchange (BSE) based on trading volume.  **Example Request:** ```http GET /BSE_most_active ```  **Example Response:** ```json [     {         \\",
+        "operationId": "bse_most_active",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/commodities": {
+      "get": {
+        "summary": "Commodity Futures Data API",
+        "description": "$239",
+        "operationId": "commodity_futures_data_api",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/stock": {
+      "get": {
+        "summary": "Get Stock Data by Name",
+        "description": "$23a",
+        "operationId": "get_stock_data_by_name",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "description": "Example value: tata steel",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/price_shockers": {
+      "get": {
+        "summary": "Price Shockers",
+        "description": "### Price Shockers  **Endpoint:** `/price_shockers`   **Method:** GET    **Description:**   Get data for stocks that have experienced significant price changes in a short period of time.  **Example Request:** ```http GET /price_shockers ```  **Example Response:** ```json [     {         \\",
+        "operationId": "price_shockers",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/industry_search": {
+      "get": {
+        "summary": "Industry Search",
+        "description": "$23b",
+        "operationId": "industry_search",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Example value: tata",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/stock_target_price": {
+      "get": {
+        "summary": "Analyst Recommendations",
+        "description": "$23c",
+        "operationId": "analyst_recommendations",
+        "parameters": [
+          {
+            "name": "stock_id",
+            "in": "query",
+            "required": true,
+            "description": "Example value: TCS",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/trending": {
+      "get": {
+        "summary": "Get Trending Stocks",
+        "description": "$23d",
+        "operationId": "get_trending_stocks",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-RapidAPI-Key"
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiAuth": []
+    }
+  ]
+}
