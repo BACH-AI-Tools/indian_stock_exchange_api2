@@ -1,6 +1,6 @@
 [project]
 name = "bach-indian_stock_exchange_api2"
-version = "1.0.0"
+version = "2.0.0"
 description = "RapidAPI: linuz/indian-stock-exchange-api2"
 readme = "README.md"
 requires-python = ">=3.10"
